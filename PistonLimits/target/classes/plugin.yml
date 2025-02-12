@@ -1,0 +1,16 @@
+name: PistonLimits
+version: 1.0
+main: com.sagmcu.PistonLimits.Main
+api-version: 1.21
+
+commands:
+  pistonlimits:
+    description: Reloads the plugin configuration
+    usage: /pistonlimits reload
+    permission: pistonlimits.admin
+    permission-message: "You do not have permission to use this command."
+
+permissions:
+  pistonlimits.admin:
+    description: Allows using the reload command
+    default: op

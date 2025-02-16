@@ -1,4 +1,4 @@
-# PistonLimits plugin config - 1.0
+# PistonLimits plugin config - 1.0.1
 # Messages
 messages:
   reload_success: "&dPistonLimits &econfiguration reloaded &asuccessfully&e."

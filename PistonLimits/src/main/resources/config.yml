@@ -3,7 +3,6 @@
 messages:
   reload_success: "&dPistonLimits &econfiguration reloaded &asuccessfully&e."
   no_permission: "&cYou do not have permission to use this command."
-  not_a_player: "&cThis command can only be used by a player."
 
 # Blocks limited from being pushed by pistons, they must be added in all caps.
 # You can also add "*" in order to block all blocks from being pushed by pistons.

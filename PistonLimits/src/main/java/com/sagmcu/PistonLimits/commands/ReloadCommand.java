@@ -34,7 +34,7 @@ public class ReloadCommand implements CommandExecutor {
         if (args.length == 1 && args[0].equalsIgnoreCase("reload")) {
             plugin.reloadConfig();
             plugin.getPistonLimiter().reloadBlockedMaterials();
-            player.sendMessage(reloadSuccessMessage);
+            sender.sendMessage(reloadSuccessMessage);
             return true;
         }
 

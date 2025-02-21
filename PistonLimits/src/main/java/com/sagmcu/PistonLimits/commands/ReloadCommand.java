@@ -24,7 +24,8 @@ public class ReloadCommand implements CommandExecutor {
         reloadSuccessMessage = ChatColorTranslator.translate(reloadSuccessMessage);
         noPermissionMessage = ChatColorTranslator.translate(noPermissionMessage);
 
-        Player player = (Player) sender;
+        if (sender instanceof Player) {
+            Player player = (Player) sender;
 
         if (!player.hasPermission("pistonlimits.admin")) {
             player.sendMessage(noPermissionMessage);
@@ -34,8 +35,17 @@ public class ReloadCommand implements CommandExecutor {
         if (args.length == 1 && args[0].equalsIgnoreCase("reload")) {
             plugin.reloadConfig();
             plugin.getPistonLimiter().reloadBlockedMaterials();
-            sender.sendMessage(reloadSuccessMessage);
+            player.sendMessage(reloadSuccessMessage);
             return true;
+        }
+    }
+        else {
+            if (args.length == 1 && args[0].equalsIgnoreCase("reload")) {
+                plugin.reloadConfig();
+                plugin.getPistonLimiter().reloadBlockedMaterials();
+                sender.sendMessage(reloadSuccessMessage);
+                return true;
+            }
         }
 
         return false;
